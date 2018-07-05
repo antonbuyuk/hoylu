@@ -1,0 +1,64 @@
+.header {
+    position: relative;
+    z-index: 99;
+
+    &-transparent{
+        background-color: transparent;
+    }
+
+    &-absolute{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    &_logo{
+
+        img{
+            max-width: 12rem;
+            width: 100%;
+        }
+    }
+
+    &_menu{
+        .menu_list{
+            justify-content: space-between;
+        }
+    }
+
+    &-auth{
+
+        &_menu{
+            
+            .menu_list{
+                justify-content: space-around;
+            }
+            
+            .menu_item{
+
+                &:last-child{
+
+                    a{
+                        padding-right: 2rem;
+                        border-right: 1px solid #e0e0e0;
+                    }
+                }
+            }
+        }
+    }
+
+    &-lang{
+
+        &_menu{
+            
+            .menu_list{
+                justify-content: space-around;
+            }
+        }
+    }
+
+    &_search{}
+
+    &_mobile{}
+}

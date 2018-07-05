@@ -1,0 +1,15 @@
+for main in mainMenu
+    nav.menu(class=main.class + '_menu')
+        ul.menu_list.menu-row(data-dropdown-menu, data-closing-time='0')
+            for menu in main.menuItems
+                if menu.dropdown
+                    li.menu_item.dropdown
+                        a(href="#")= menu.link
+                        i.i-arrow-bottom
+                        ul.dropdown_list.shadow-light
+                            for item in menu.dropdown
+                                li.dropdown_item
+                                    a(href="#")=item
+                else
+                    li.menu_item
+                        a(href="#")= menu.link

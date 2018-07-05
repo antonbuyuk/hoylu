@@ -1,0 +1,88 @@
+.form {
+
+    &_item {
+
+        &-checkbox {
+
+            input {}
+
+            span {}
+        }
+
+        &-radiobox {
+
+            input {}
+
+            span {}
+        }
+
+        &-upload{
+            position: relative;
+            height: 2rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover{
+
+                div{}
+            }
+
+            div {}
+
+            input[type=file] {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                cursor: pointer;
+                padding: 0;
+
+                &:hover {
+                    cursor: pointer;
+
+                    +div {
+                        color: @main;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        &-search{
+
+            button{}
+        }
+
+        input{
+            border-radius: 0;
+            display: block;
+            font-family: @font-family;
+            width: 100%;
+
+            &::placeholder{}
+
+            &:focus{}
+
+            &.is-invalid-input{}
+        }
+
+        textarea{
+            width: 100%;
+            max-width: 100%;
+            border-radius: 0;
+            display: block;
+            font-family: @font-family;
+            min-height: 5rem;
+
+            &::placeholder{}
+        }
+
+        .btn{}
+    }
+
+    &-error{}
+}

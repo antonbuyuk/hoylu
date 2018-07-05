@@ -1,0 +1,9 @@
+for btn in btnType
+    if btn.icon
+        a.btn(href="#", class="btn_size-"+ btn.size + " btn_color-"+ btn.color + " btn_icon")= btn.text
+            i(class="i-"+ btn.icon)
+    else
+        a.btn(href="#", class="btn_size-"+ btn.size + " btn_color-"+ btn.color)= btn.text
+
+//- -var btnType = [{"icon":"arrow-right","size":"medium","color":"red","text":"привет"}];
+//- include ./components/_btn

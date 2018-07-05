@@ -1,0 +1,36 @@
+extends templates/_layout
+
+block vars
+	- var page = "main_page";
+	- var title = "index";
+
+block content
+	section.section
+		.row.align-bottom.mb-5
+			.columns.small-12.medium-8.large-8
+				.title.title_size-medium.weight-bold Latest news
+			.columns.small-12.medium-4.large-4.flex.align-right
+				a(href="#", title="title").link_all All Articles
+					i.i-arrow-right
+		.row
+			-var newsItem = [{"date":"May 5th. 2018","title":"Hoylu ab publishes the interim report for january - march 2018","text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"},{"date":"May 5th. 2018","title":"Hoylu ab publishes the interim report for january","text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"},{"date":"May 5th. 2018","title":"Hoylu receives orders in education","text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"}];
+			include ./components/_news
+	section.section.patern.section_padding.mb-0
+		.row
+			.columns.small-12.medium-6
+				.row.align-bottom.mb-4
+					.columns.small-12.medium-8.large-8
+						.title.title_size-medium.weight-bold Hoylu Suite
+					.columns.small-12.medium-4.large-4.flex.align-right
+						a(href="#", title="title").link_all See Hoylu Suite
+							i.i-arrow-right
+				.row.mb-4
+					.columns.small-12
+						-var textBlock = [{"size":"medium","color":"black","align":"left","paragraph":["Hoylu Suite is designed to make digital work simple,seamless and hassle free. Hoylu established a digital workspace platform focused on the holistic experience to allow workers to increase their productivity and make decisions faster.","Hoylu Suite delivers a comprehensive set of personalized digital workspaces to enable teams across locations, on any device, to work smarter across major industries."]}];
+						include ./components/_text
+				.row
+					.columns.small-12
+						-var btnType = [{"icon":"arrow-right","size":"medium","color":"red","text":"sign in"},{"icon":"","size":"medium","color":"float","text":"create account"}];
+						include ./components/_btn
+						
+	

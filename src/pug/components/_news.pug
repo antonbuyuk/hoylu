@@ -1,0 +1,9 @@
+for news in newsItem
+    .columns.small-12.medium-6.large-4
+        .news_block
+            .date= news.date
+            a.title.title_size-small.color-dark.weight-bold(href="#")= news.title
+            .text.text-small
+                p= news.text
+            a.link_more(href="#") read more
+                i.i-ios_arrow-right

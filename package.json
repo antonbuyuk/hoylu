@@ -1,0 +1,41 @@
+{
+	"name": "templates",
+	"version": "1.0.0",
+	"description": "",
+	"main": "gulpfile.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/antonbuyuk/templates.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/antonbuyuk/templates/issues"
+	},
+	"homepage": "https://github.com/antonbuyuk/templates#readme",
+	"devDependencies": {
+		"gulp": "latest",
+		"gulp-connect": "latest",
+		"gulp-uglify": "latest",
+		"gulp-plumber": "latest",
+		"gulp-rename": "latest",
+		"gulp-sourcemaps": "latest",
+		"gulp-watch": "latest",
+		"rimraf": "latest"
+	},
+	"dependencies": {
+		"gulp-autoprefixer": "latest",
+		"gulp-concat": "latest",
+		"gulp-csso": "latest",
+		"gulp-data": "latest",
+		"gulp-image": "latest",
+		"gulp-json-minify": "latest",
+		"gulp-less": "latest",
+		"gulp-livereload": "^3.8.1",
+		"gulp-pug": "latest",
+		"gulp-util": "latest"
+	}
+}

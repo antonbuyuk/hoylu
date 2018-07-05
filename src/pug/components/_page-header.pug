@@ -1,0 +1,15 @@
+header.header.header-white
+    .row.row-large.align-middle
+        .columns.small-6.medium-3.large-2
+            -var logoClass = 'header';
+            include ./_logo
+        .columns.small-6.medium-3.large-6
+            -var mainMenu = [{"class":"header","menuItems":[{"link":"why hoylu?","dropdown":["Investor Relations","News","Stock Information","Financial Information","Corporate Governance"]},{"link":"hoylu suite"},{"link":"innovation @ work"},{"link":"free trial"},{"link":"news"}]}];
+            include ./_menu
+        .columns.small-6.medium-3.large-2.large-offset-1
+            -var mainMenu = [{"class":"header-auth","menuItems":[{"link":"sign in"},{"link":"sign up"}]}];
+            include ./_menu
+        .columns.small-6.medium-3.large-1
+            -var mainMenu = [{"class":"header-lang","menuItems":[{"link":"eng"},{"link":"swe"}]}];
+            include ./_menu
+            
