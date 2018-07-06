@@ -6,6 +6,26 @@ block vars
 
 block content
 	section.section
+		.row.expanded
+			.hidden-small.hidden-medium.large-6
+				.background-55.background_image.background_image-cover(style='background-image: url(./templates/_ares/img/png/bg1.png)')
+			.small-12.large-6
+				.background-55.background_image.background_image-cover.flex.align-middle(style='background-image: url(./templates/_ares/img/svg/bg1.svg)')
+					.row
+						.columns.small-12.medium-10.large-7.large-offset-1
+							.carousel_main.owl-carousel.owl-theme
+								mixin carousel
+									.item
+										.title.text-medium.text-uppercase.color-white.weight-medium.mb-2 SOFTWARE UPDATE
+										.title.title_size-extraLarge.color-white.weight-bold.mb-3 Just released
+										-var textBlock = [{"size":"medium","color":"white","align":"left","paragraph":["Hoylu Suite 3.5 is now available to all current subscribers.","The release is focused on improving the user experience and delivering many valuable new features."]}];
+										include ./components/_text
+										-var btnType = [{"icon":"ios_arrow-right","size":"medium","color":"yellow","text":"learn more"}];
+										include ./components/_btn
+								+carousel
+								+carousel
+								+carousel
+	section.section
 		.row.align-bottom.mb-5
 			.columns.small-12.medium-8.large-8
 				.title.title_size-medium.weight-bold Latest news

@@ -20,6 +20,18 @@ $(document).ready(function () {
     });
 });
 
+// Carousel
+$(document).ready(function () { 
+    if ($('.carousel_main').length) {
+        $('.carousel_main').owlCarousel({
+            loop: false,
+            margin: 0,
+            nav: false,
+            items: 1
+        })
+    }
+ })
+
 $(window).ready(function () {
     $('body').css('opacity', '1');
  })

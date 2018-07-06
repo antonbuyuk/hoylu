@@ -994,6 +994,7 @@ textarea {
 .row.expanded .row {
   margin-right: auto;
   margin-left: auto;
+  width: 100%;
 }
 .row:not(.expanded) .row {
   max-width: none;
