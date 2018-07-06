@@ -137,7 +137,13 @@ p {
 
         &:hover{
             color: @green--hover;
-        }
+		}
+		
+		@media (max-width: 63.975em){
+			display: flex;
+			margin-right: auto;
+			margin-top: 1rem;
+		}
     }
 }
 
@@ -231,11 +237,26 @@ p {
 
 	&_padding{
 		padding: 8.75rem 0;
+
+		&-4{
+			padding: 3.75rem 0;
+		}
+	}
+
+	&_color{
+
+		&-blue{
+			background-color: #3dbad2;
+		}
 	}
 }
 
 .patern{
 	background-image: url(../img/png/patern.png);
+
+	&-blue{
+		background-image: url(../img/png/patern-blue.png);
+	}
 }
 
 .map{

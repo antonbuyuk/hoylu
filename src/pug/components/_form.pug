@@ -1,23 +1,21 @@
-.form_area.patern
-    for form in formBlock
-        form.form(action="#", data-abide, novalidate)
+for form in formBlock
+    form.form(action="#", data-abide, novalidate)
+        .row
             for item in form.formItems
-                .form_item
-                    input(type="text", name="", placeholder=item.inpt, required)
-                    span.form-error 
-                        i.i-error
+                .columns.small-12(class="medium-"+item.medium+" large-"+item.large)
+                    .form_item
+                        input(type="text", name="", placeholder=item.inpt, required)
             if form.textarea
-                .form_item
-                    textarea(name="", placeholder="Сообщение")
-            else
-
+                .columns.small-12
+                    .form_item
+                        textarea(name="", placeholder="Your message")
             if form.file
-                .form_item.form_item-upload
-                    i.i-attachment
-                    input(type="file", name="uploadfile", )
-                    div Прикрепить резюме
-            else
-
-            .form_item
-                button.btn.btn_border.btn_color-yellow.btn_size-medium(type="submit")
-                    span=form.btnForm 
+                .columns.small-12
+                    .form_item.form_item-upload
+                        i.i-attachment
+                        input(type="file", name="uploadfile", )
+                        div file
+            .columns.small-12
+                .form_item
+                    button.btn.btn_color-red.btn_size-medium(type="submit")
+                        span=form.btnForm

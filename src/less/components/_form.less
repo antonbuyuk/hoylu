@@ -1,6 +1,9 @@
 .form {
 
     &_item {
+        position: relative;
+        width: 100%;
+        margin-bottom: 1.875rem;
 
         &-checkbox {
 
@@ -62,27 +65,64 @@
             display: block;
             font-family: @font-family;
             width: 100%;
+            color: #666;
+            font-size: 1.125rem;
+            line-height: 1.625rem;
+            padding: 0.6875rem 1.25rem;
+            border: 1px solid #bbb;
 
-            &::placeholder{}
+            &::placeholder{
+                color: #bbb;
+            }
 
-            &:focus{}
+            &:focus{
+                border-color: @yellow--hover;
+            }
 
-            &.is-invalid-input{}
+            &.is-invalid-input{
+                border-color: @red--hover;
+
+                &::placeholder{
+                    color: @red--hover;
+                }
+            }
         }
 
         textarea{
             width: 100%;
             max-width: 100%;
+            min-width: 100%;
             border-radius: 0;
             display: block;
             font-family: @font-family;
-            min-height: 5rem;
+            min-height: 10rem;
+            color: #666;
+            font-size: 1.125rem;
+            line-height: 1.625rem;
+            padding: 0.6875rem 1.25rem;
+            border: 1px solid #bbb;
 
-            &::placeholder{}
+            &::placeholder{
+                color: #bbb;
+            }
+
+            &:focus{
+                border-color: @yellow--hover;
+            }
         }
 
         .btn{}
     }
 
     &-error{}
+
+    .columns{
+
+        &:last-child{
+            
+            .form_item{
+                margin-bottom: 0;
+            }
+        }
+    }
 }

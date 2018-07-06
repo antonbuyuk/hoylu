@@ -1,0 +1,8 @@
+for item in mediaItems
+    .media(class="media_type-"+item.type+" media_color-"+item.color)
+        if item.img
+            .media_container
+                img(src=item.img, alt="")
+        if item.video
+            .media_container
+                iframe(src=item.video, frameborder="0",  allow="autoplay; encrypted-media",allowfullscreen)

@@ -1,0 +1,67 @@
+.media{
+    position: relative;
+
+    @media (max-width: 63.975em){
+        margin-bottom: 1.875rem;
+    }
+
+    &:before{
+        content: "";
+        position: absolute;
+        left: 1.25rem;
+        top: 1.25rem;
+        width: 100%;
+        height: 100%;
+
+        @media (max-width: 63.975em){
+            left: 0.9375rem;
+            top: 0.9375rem;
+        }
+    }
+
+    &_type{
+
+        &-video{
+
+            .media_container{
+                padding-bottom: 56.2%;
+            }
+        }
+
+        &-image{}
+    }
+
+    &_color{
+
+        &-yellow{
+            &:before{
+                background-color: @yellow;
+            }
+        }
+        &-blue{
+            &:before{
+                background-color: @blue;;
+            }
+        }
+        &-red{
+            &:before{
+                background-color: @red;
+            }
+        }
+        &-green{
+            &:before{
+                background-color: @green;
+            }
+        }
+    }
+
+    &_container{
+        position: relative;
+
+        iframe{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

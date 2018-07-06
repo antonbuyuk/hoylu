@@ -1,0 +1,9 @@
+for item in edgeItems
+    .columns(class="small-"+item.small+" medium-"+item.medium+" large-"+item.large)
+        .edge
+            .edge_img
+                img(src=item.img, alt="")
+            .edge_container
+                .edge_title.title.title_size-medium.color-white= item.title
+                .edge_text.text.text-medium.color-white
+                    p= item.text

@@ -26,11 +26,49 @@ block content
 							i.i-arrow-right
 				.row.mb-4
 					.columns.small-12
-						-var textBlock = [{"size":"medium","color":"black","align":"left","paragraph":["Hoylu Suite is designed to make digital work simple,seamless and hassle free. Hoylu established a digital workspace platform focused on the holistic experience to allow workers to increase their productivity and make decisions faster.","Hoylu Suite delivers a comprehensive set of personalized digital workspaces to enable teams across locations, on any device, to work smarter across major industries."]}];
+						-var textBlock = [{"size":"medium","color":"grey","align":"left","paragraph":["Hoylu Suite is designed to make digital work simple,seamless and hassle free. Hoylu established a digital workspace platform focused on the holistic experience to allow workers to increase their productivity and make decisions faster.","Hoylu Suite delivers a comprehensive set of personalized digital workspaces to enable teams across locations, on any device, to work smarter across major industries."]}];
 						include ./components/_text
 				.row
 					.columns.small-12
 						-var btnType = [{"icon":"arrow-right","size":"medium","color":"red","text":"sign in"},{"icon":"","size":"medium","color":"float","text":"create account"}];
 						include ./components/_btn
-						
-	
+			.columns.small-12.medium-6
+				-var mediaItems = [{"type":"video","color":"yellow","video":"https://www.youtube.com/embed/X2Qjoj9ZD_A"}];
+				include ./components/_media-container
+	section.section.section_color-blue.section_padding-4
+		.row
+			-var edgeItems = [{"small":"12","medium":"6","large":"4","img":"./templates/_ares/img/svg/strategy.svg","title":"Plan","text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamt."},{"small":"12","medium":"6","large":"4","img":"./templates/_ares/img/svg/puzzle.svg","title":"Assemble","text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamt."},{"small":"12","medium":"6","large":"4","img":"./templates/_ares/img/svg/space_ship.svg","title":"Evolve","text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamt."}];
+			include ./components/_edge
+	section.section
+		.row.align-bottom.mb-5
+			.columns.small-12.medium-8.large-8
+				.title.title_size-medium.weight-bold Latest Case Study
+			.columns.small-12.medium-4.large-4.flex.align-right
+				a(href="#", title="title").link_all See more cases
+					i.i-arrow-right
+		.row
+			.columns.small-12.medium-6
+				-var mediaItems = [{"type":"image","color":"green","img":"./templates/_ares/img/jpg/insight.jpg"}];
+				include ./components/_media-container
+			.columns.small-12.medium-6.large-5.large-offset-1
+				.row.mb-4
+					.columns.small-12
+						-var textBlock = [{"size":"medium","color":"grey","align":"left","paragraph":["Holland America Group innovates ship to shore communication for entire fleet.","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "]}];
+						include ./components/_text
+				.row
+					.columns.small-12
+						a.link_more(href="#") read more
+							i.i-ios_arrow-right
+	section.section.patern-blue.section_padding.mb-0
+		.row
+			.columns.small-12.medium-6.large-3
+				.row
+					.columns.small-12.mb-4
+						.title.title_size-medium.weight-bold Contact us
+					.columns.small-12
+						-var textBlock = [{"size":"medium","color":"grey","align":"left","paragraph":["We would love to hear from you! Provide the information below and one of our Inspiration gurus will get right back to you."]}];
+						include ./components/_text
+			.columns.small-12.medium-6.large-9
+				- var formBlock = [{"textarea":true,"btnForm":"send message","formItems":[{"medium":"12","large":"4","inpt":"Name*"},{"medium":"6","large":"4","inpt":"E-mail*"},{"medium":"6","large":"4","inpt":"Location"}]}];
+				include ./components/_form
+				
