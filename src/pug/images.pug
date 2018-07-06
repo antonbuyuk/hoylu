@@ -1,0 +1,25 @@
+extends templates/_layout
+
+block vars
+    - var page = "main_page";
+    - var title = "images";
+
+block content
+    section.section
+        .row.expanded
+            .small-12
+                .background-6.background_image.background_image-cover.flex.align-middle(style='background-image: url(./templates/_ares/img/svg/bg1.svg)')
+                    .row
+                        .columns.small-12
+                            include ./components/_breadcrumbs
+    section.section
+        .row
+            .columns.small-12
+                .title.title_size-medium.weight-bold Images & Videos
+        .row
+            .columns.small-12.medium-6.large-6 1
+            .columns.small-12.medium-6.large-6 2
+            .columns.small-12.medium-6.large-3 3
+            .columns.small-12.medium-6.large-5 4
+            .columns.small-12.medium-6.large-4 5
+                    
