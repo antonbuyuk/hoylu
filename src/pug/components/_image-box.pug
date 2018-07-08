@@ -1,0 +1,5 @@
+for item in imageItems
+    .columns.small-12.medium-6(class="large-"+item.large)
+        a.images_box(href="#")
+            span.images_img(style="background-image: url("+item.img+")")
+            span.images_title=item.title

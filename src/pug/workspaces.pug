@@ -1,0 +1,64 @@
+extends templates/_layout
+
+block vars
+    - var page = "main_page";
+    - var title = "workspaces";
+
+block content
+    section.section
+        .row.expanded
+            .small-12
+                .background-55.background_image.background_image-cover(style='background-image: url(./templates/_ares/img/svg/bg1.svg)')
+                    .row.mb-6
+                        .columns.small-12
+                            include ./components/_breadcrumbs
+                    .row.mb-6
+                        .columns.hidden-small.medium-5.large-5
+                            img(src="./templates/_ares/img/png/ball.png", alt="")
+                        .columns.small-12.medium-6.large-6.large-offset-1
+                            .title.title_size-extraLarge.color-white.weight-bold.mb-3 Easy and flexible digital workspaces
+                            -var textBlock = [{"size":"medium","color":"white","align":"left","paragraph":["Hoylu Suite is a comprehensive set of personalized digital workspaces to enable teams across locations, on any device, to work smarter and with more fun. These immersive workspaces allow the greatest in flexibility so you can work with ease."]}];
+                            include ./components/_text
+                            .row.mt-3
+                                .column.small-6.medium-3
+                                    img(src="./templates/_ares/img/png/sketch.png", alt="")
+                                .column.small-6.medium-3
+                                    img(src="./templates/_ares/img/png/flow.png", alt="")
+                                .column.small-6.medium-3
+                                    img(src="./templates/_ares/img/png/paper.png", alt="")
+                                .column.small-6.medium-3
+                                    img(src="./templates/_ares/img/png/capture.png", alt="")
+    section.section
+        .row
+            .column.small-12
+                -var featuresItems = [{"type":"","img":"./templates/_ares/img/jpg/work.jpg","color":"green","title":"Sketch"},{"type":"reverse","img":"./templates/_ares/img/jpg/work2.jpg","color":"orange","title":"Flow"},{"type":"","img":"./templates/_ares/img/jpg/work3.jpg","color":"blue","title":"Paper"},{"type":"reverse","img":"./templates/_ares/img/jpg/work4.jpg","color":"red","title":"Capture"}];
+                include ./components/_features
+    section.section.patern.section_padding.mb-0
+        .row.mb-
+            .columns.small-12.medium-6
+                .title.title_size-medium.weight-bold.mb-3 Workspaces for every industry
+                -var textBlock = [{"size":"medium mb-2","color":"black","align":"left","paragraph":["Hoylu Suite covers a range of businesses from higher education involving in-class and distance learning, corporate training, construction, engineering, automotive, life sciences, and leisure and even sports coaching.","Organizations are able to include all major steps in the enterprise information management cycle; plan, assemble, present, collaborate, act and evolve with Hoylu Suiteю"]}];
+                include ./components/_text
+                a.link_more(href="#") See more Innovation @ Work
+            .columns.small-12.medium-6
+                -var mediaItems = [{"type":"image","color":"green","img":"./templates/_ares/img/jpg/insight5.jpg"}];
+                include ./components/_media-container
+    section.section.section_padding.mb-0
+        .row
+            .columns.small-12
+                .title.align-center.title_size-medium.weight-bold.mb-1 Ready to get started?
+                .align-center.title_size-small.weight-bold.text-center Experience Hoylu Suite now, 
+                    a(href='#') Free trial  
+                    | for 30 days
+    section.section.patern-blue.section_padding.mb-0
+        .row
+            .columns.small-12.medium-6.large-3
+                .row
+                    .columns.small-12.mb-4
+                        .title.title_size-medium.weight-bold Contact us
+                    .columns.small-12
+                        -var textBlock = [{"size":"medium","color":"grey","align":"left","paragraph":["We would love to hear from you! Provide the information below and one of our Inspiration gurus will get right back to you."]}];
+                        include ./components/_text
+            .columns.small-12.medium-6.large-9
+                - var formBlock = [{"textarea":true,"btnForm":"send message","formItems":[{"medium":"12","large":"4","inpt":"Name*"},{"medium":"6","large":"4","inpt":"E-mail*"},{"medium":"6","large":"4","inpt":"Location"}]}];
+                include ./components/_form

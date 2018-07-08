@@ -1,0 +1,14 @@
+for list in listItems
+    ul.list(class="text-"+ list.size +" color-"+ list.color +" text-"+ list.align)
+        for item in list.list
+            li=item
+
+//- -var listItems = [
+//-     {
+//-         "size":"medium",
+//-         "color":"white",
+//-         "align":"left",
+//-         "list":["Full access to Hoylu Suite for 30 days","Web access at HoyluSuite.com","Unlimited devices","Cloud access", "Admin controls and permissions"]
+//-     }
+//- ];
+//- include ./components/_list

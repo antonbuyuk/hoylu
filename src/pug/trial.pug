@@ -1,0 +1,56 @@
+extends templates/_layout
+
+block vars
+    - var page = "main_page";
+    - var title = "trial";
+
+block content
+    section.section
+        .row.expanded
+            .small-12
+                .background-55.background_image.background_image-cover(style='background-image: url(./templates/_ares/img/svg/bg1.svg)')
+                    .row.mb-6
+                        .columns.small-12
+                            include ./components/_breadcrumbs
+                    .row.mb-6
+                        .columns.small-12.medium-6.large-6
+                            .row
+                                .small-10
+                                    .title.text-medium.text-uppercase.color-white.weight-medium.mb-2 Discover how Hoylu Suite helps you plan, build and evolve your collaboration
+                                .small-12
+                                    .title.title_size-extraLarge.color-white.weight-bold.mb-3 What does my free trial include?
+                                    -var listItems = [{"size":"medium","color":"white","align":"left","list":["Full access to Hoylu Suite for 30 days","Web access at HoyluSuite.com","Unlimited devices","Cloud access","Admin controls and permissions"]}];
+                                    include ./components/_list
+                        .columns.small-12.medium-6
+                            - var formBlock = [{"textarea":false,"btnForm":"sign up","formItems":[{"medium":"12","large":"12","inpt":"First Name*"},{"medium":"12","large":"12","inpt":"Last Name*"},{"medium":"12","large":"12","inpt":"Company"},{"medium":"12","large":"12","inpt":"E-mail"},{"medium":"12","large":"12","inpt":"Password"}]}];
+                            .form_area.mt_3
+                                .title.align-center.color-dark.title_size-small.weight-bold.text-center.mb-1 Experience Hoylu Suite, free for 30 days
+                                .text-medium.color-grey.text-center.mb-2
+                                    p Sign up to start your free trial!
+                                include ./components/_form
+    section.section.mb-0
+        .row
+            .columns.small-12.medium-10.large-7
+                .title.title_size-medium.weight-bold.mb-3 Hoylu Suite runs a variety of devices for all your collaboration needs
+        .row
+            .column.small-12
+                -var featuresItems = [{"type":"","img":"./templates/_ares/img/jpg/trial1.jpg","color":"green","title":"Huddlewall"},{"type":"reverse","img":"./templates/_ares/img/jpg/work2.jpg","color":"blue","title":"Large display"},{"type":"","img":"./templates/_ares/img/jpg/trial3.jpg","color":"red","title":"Personal device"}];
+                include ./components/_features
+    section.section.section_padding.mb-0
+        .row
+            .columns.small-12
+                .title.align-center.title_size-medium.weight-bold.mb-1 Already love and ready to subscribe?
+                .align-center.title_size-small.weight-bold.text-center
+                    a(href='#') YES! Let me see payment options
+    section.section.patern-blue.section_padding.mb-0
+        .row
+            .columns.small-12.medium-6.large-3
+                .row
+                    .columns.small-12.mb-4
+                        .title.title_size-medium.weight-bold Contact us
+                    .columns.small-12
+                        -var textBlock = [{"size":"medium","color":"grey","align":"left","paragraph":["We would love to hear from you! Provide the information below and one of our Inspiration gurus will get right back to you."]}];
+                        include ./components/_text
+            .columns.small-12.medium-6.large-9
+                - var formBlock = [{"textarea":true,"btnForm":"send message","formItems":[{"medium":"12","large":"4","inpt":"Name*"},{"medium":"6","large":"4","inpt":"E-mail*"},{"medium":"6","large":"4","inpt":"Location"}]}];
+                include ./components/_form

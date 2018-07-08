@@ -1,0 +1,10 @@
+for item in featuresItems
+    .features
+        .row(class="row-"+item.type)
+            .small-12.medium-6.large-7
+                .features_img(class="features_box-"+item.color, style='background-image: url('+ item.img +')')
+            .small-12.medium-6.large-5
+                .features_box(class="features_box-"+item.color)
+                    .title.title_size-small.color-white.weight-bold.mb-2= item.title
+                    -var textBlock = [{"size":"small","color":"white","align":"left","paragraph":["Anytime Collaboration is a powerful sharing capability leveraging the power of the cloud.","Teams conduct workplace planning, brainstorm and sketch together, and leverage process methodologies from anywhere in the world, working seamlessly across geographies to collaborate most efficiently."]}];
+                    include ./_text

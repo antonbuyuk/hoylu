@@ -30,6 +30,20 @@ $(document).ready(function () {
             items: 1
         })
     }
+
+    if ($('.carousel_features').length) {
+        $('.carousel_features').owlCarousel({
+            loop: false, 
+            margin: 0, 
+            nav: true,
+            dots: false,
+            navText : [
+                "<i class='i-arrow-left'></i>", "<i class='i-arrow-right'></i>"
+            ],
+             items: 1
+        })
+    }
+    
  })
 
 $(window).ready(function () {

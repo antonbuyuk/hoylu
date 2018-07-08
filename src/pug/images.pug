@@ -13,13 +13,23 @@ block content
                         .columns.small-12
                             include ./components/_breadcrumbs
     section.section
-        .row
+        .row.mb-4
             .columns.small-12
                 .title.title_size-medium.weight-bold Images & Videos
         .row
-            .columns.small-12.medium-6.large-6 1
-            .columns.small-12.medium-6.large-6 2
-            .columns.small-12.medium-6.large-3 3
-            .columns.small-12.medium-6.large-5 4
-            .columns.small-12.medium-6.large-4 5
-                    
+            -var imageItems = [{"large":"6","img":"./templates/_ares/img/jpg/insight6.jpg","title":"Logos"},{"large":"6","img":"./templates/_ares/img/jpg/insight2.jpg","title":"Product Photos"},{"large":"3","img":"./templates/_ares/img/jpg/insight3.jpg","title":"Videos"},{"large":"5","img":"./templates/_ares/img/jpg/insight4.jpg","title":"Screenshots"},{"large":"4","img":"./templates/_ares/img/jpg/insight.jpg","title":"Use Cases"}];
+            include ./components/_image-box
+    section.section
+        .row.mb-2
+            .columns.small-12
+                .flex-row.align-left.align-middle
+                    .title.title_size-extraSmall.weight-bold.color-grey.width-auto Stay connected
+                    -var social = ["./templates/_ares/img/svg/social/blue/twitter.svg","./templates/_ares/img/svg/social/blue/facebook.svg","./templates/_ares/img/svg/social/blue/youtube.svg","./templates/_ares/img/svg/social/blue/linkedin.svg","./templates/_ares/img/svg/social/blue/vimeo.svg"]
+                    include ./components/_social
+        .row
+            .columns.small-12
+                .title.title_size-extraSmall.weight-bold.color-grey.width-auto Media contact:
+            .columns.small-12
+                .text-medium.color-grey
+                    p Stein Revelsby, 
+                        a(href="#") sr@hoylu.com 

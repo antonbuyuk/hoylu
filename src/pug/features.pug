@@ -1,0 +1,79 @@
+extends templates/_layout
+
+block vars
+    - var page = "main_page";
+    - var title = "features";
+
+block content
+    section.section
+        .row.expanded
+            .small-12
+                .background-55.background_image.background_image-cover(style='background-image: url(./templates/_ares/img/svg/bg1.svg)')
+                    .row.mb-6
+                        .columns.small-12
+                            include ./components/_breadcrumbs
+                    .row.mb-6
+                        .columns.small-12.medium-6.large-7
+                            .title.title_size-extraLarge.color-white.weight-bold.mb-3 Key features to get work done.
+                            -var textBlock = [{"size":"medium","color":"white","align":"left","paragraph":["Hoylu Suite contains many features that allow teams and individuals to easily work more efficiently together.","All critical business content together in one place to best serve your needs."]}];
+                            include ./components/_text
+                        .columns.small-12.medium-6.large-5
+                            .row
+                                .columns.small-6.text-center.mb-3
+                                    img.mb-1(src="./templates/_ares/img/png/ico1.png", alt="")
+                                    .title.text-uppercase.color-white.weight-medium.align-center Anytime Collaboration
+                                .columns.small-6.text-center.mb-3
+                                    img.mb-1(src="./templates/_ares/img/png/ico2.png", alt="")
+                                    .title.text-uppercase.color-white.weight-medium.align-center Infinite
+                                        br 
+                                        | Canvas
+                                .columns.small-6.text-center.mb-3
+                                    img.mb-1(src="./templates/_ares/img/png/ico3.png", alt="")
+                                    .title.text-uppercase.color-white.weight-medium.align-center Personalized Content
+                                .columns.small-6.text-center.mb-3
+                                    img.mb-1(src="./templates/_ares/img/png/ico4.png", alt="")
+                                    .title.text-uppercase.color-white.weight-medium.align-center Security
+                                        br 
+                                        | Controls
+                    .row.hidden-small.hidden-medium
+                        .columns.small-12
+                            img(src="./templates/_ares/img/png/features.png", alt="")
+    section.section
+        .row
+            .column.small-12
+                -var featuresItems = [{"type":"","img":"./templates/_ares/img/jpg/features1.jpg","color":"orange","title":"Anytime Collaboration"},{"type":"reverse","img":"./templates/_ares/img/jpg/features2.jpg","color":"green","title":"Infinite Canvas"},{"type":"","img":"./templates/_ares/img/jpg/features3.jpg","color":"red","title":"Personal Content"},{"type":"reverse","img":"./templates/_ares/img/jpg/features4.jpg","color":"blue","title":"Security Controls"}];
+                include ./components/_features
+    section.section.patern.section_padding.mb-0
+        .row.mb-3
+            .columns.small-12
+                .title.title_size-medium.weight-bold Knowledge is power.
+        .row
+            .columns.small-12
+                .carousel_features.owl-carousel.owl-theme
+                    mixin carousel
+                        .item.text-center
+                            img.mb-2(src="./templates/_ares/img/png/carousel.png", alt="")
+                            -var textBlock = [{"size":"medium","color":"grey","align":"center","paragraph":["Every team has access to your valuable content to collaborate in real time to ensure you achieve your business goals."]}];
+                            include ./components/_text
+                    +carousel
+                    +carousel
+                    +carousel
+    section.section.section_padding.mb-0
+        .row
+            .columns.small-12
+                .title.align-center.title_size-medium.weight-bold.mb-1 Ready to get started?
+                .align-center.title_size-small.weight-bold.text-center Experience Hoylu Suite now, 
+                    a(href='#') Free trial  
+                    | for 30 days
+    section.section.patern-blue.section_padding.mb-0
+        .row
+            .columns.small-12.medium-6.large-3
+                .row
+                    .columns.small-12.mb-4
+                        .title.title_size-medium.weight-bold Contact us
+                    .columns.small-12
+                        -var textBlock = [{"size":"medium","color":"grey","align":"left","paragraph":["We would love to hear from you! Provide the information below and one of our Inspiration gurus will get right back to you."]}];
+                        include ./components/_text
+            .columns.small-12.medium-6.large-9
+                - var formBlock = [{"textarea":true,"btnForm":"send message","formItems":[{"medium":"12","large":"4","inpt":"Name*"},{"medium":"6","large":"4","inpt":"E-mail*"},{"medium":"6","large":"4","inpt":"Location"}]}];
+                include ./components/_form

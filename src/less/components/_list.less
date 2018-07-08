@@ -1,0 +1,23 @@
+.list{
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+
+    li{
+        position: relative;
+        padding-left: 2.5rem;
+
+        &:before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 0;
+            height: 0;
+            border-top: 0.4375rem solid transparent;
+            border-left: 1.5rem solid @blue;
+            border-bottom: 0.4375rem solid transparent;
+        }
+    }
+}
