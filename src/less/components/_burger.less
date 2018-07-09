@@ -1,6 +1,110 @@
 .burger{
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-left: 0;
+    cursor: pointer;
+    border-bottom: none;
 
-    @media (min-width: 40em){
+    @media (max-width: 39.975em){
+        margin-right: 1rem;
+        margin-left: auto;
+    }
 
+    .stick{
+        width: 2.5rem;
+        height: 0.25rem;
+        border-radius: 0;
+        margin-bottom: 0.5rem;
+        background-color:  @black;
+        display: inline-block;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        &-1{
+
+            &.open{
+                animation: stick-1-open .6s ease-out forwards;
+            }
+
+            &.close{
+                width: 0.25rem; 
+                transform: translate(0.84375rem, 0,8125rem);
+                animation: stick-1-close .6s ease-out forwards;
+            }
+        }
+
+        &-2{
+
+            &.open{
+                animation: stick-2-open .6s linear forwards;
+            }
+
+            &.close{
+                transform: translate(0rem, 0rem) rotate(40deg);
+                animation: stick-2-close .6s ease-out forwards;
+            }
+        }
+
+        &-3{
+
+            &.open{
+                animation: stick-3-open .6s linear forwards;
+            }
+
+            &.close{
+                transform: translate(0rem, -0.71875rem) rotate(-40deg);
+                animation: stick-3-close .6s ease-out forwards;
+            }
+        }
     }
 }
+
+
+@keyframes stick-1-open {
+    0%   {width: 2.5rem;}
+    40%  {background-color: @red; width: 0.25rem; transform: translate(1.25rem, 0rem);}
+    75%, 80%  {width: 0.25rem; transform: translate(1.25rem, -1.25rem); animation-timing-function: cubic-bezier(0,1,1,1);}
+    100% {background-color: @red; width: 0.25rem; transform: translate(1.1rem, 1.4375rem);}
+  }
+  
+  @keyframes stick-2-open {
+    80%  {background-color: @green; transform: translate(0rem, 0rem) rotate(0deg);}
+    100% {background-color: @red; transform: translate(0.25rem, 0rem) rotate(40deg);}
+  }
+  
+  @keyframes stick-3-open {
+    80%  {background-color: @green; transform: translate(0rem, 0rem) rotate(0deg);}
+    100% {background-color: @red; transform: translate(0.25rem, -0.71875rem) rotate(-40deg);}
+  }
+
+  
+@keyframes stick-1-close {
+    0%, 70% {width: 0rem;}
+    100%    {width: 2.5rem; transform: translate(0, 0);}
+  }
+  
+  @keyframes stick-2-close {
+    0%   {background-color: @red; width: 2.5rem;}
+    20%  {background-color: @red; width: 0.25rem; transform: translate(0, 0rem) rotate(40deg);}
+    40%  {background-color: @green; width: 0rem;}
+    65%  {transform: translate(0, -4.375rem); animation-timing-function: cubic-bezier(0,1,1,1);}
+    80%  {width: 0rem;}
+    100% {width: 2.5rem; transform: translate(0, 0rem);}
+  }
+  
+  @keyframes stick-3-close {
+    0%   {background-color: @red; width: 2.5rem;}
+    20%  {background-color: @red; width: 0.25rem; transform: translate(0, -0.71875rem) rotate(-40deg);}
+    40%  {background-color: @green;}
+    65%  {transform: translate(0, -2.9rem); animation-timing-function: cubic-bezier(0,1,1,1);}
+    90%  {width: 0.25rem;}
+    100% {width: 2.5rem; transform: translate(0, 0rem);}
+  }

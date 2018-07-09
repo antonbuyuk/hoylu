@@ -46,6 +46,15 @@ $(document).ready(function () {
     
  })
 
+ // Burger
+ $(document).ready(function() {
+    $(".burger").click(function() {
+      $(".stick").toggleClass(function () {
+        return $(this).is('.open, .close') ? 'open close' : 'open';
+      });
+    });
+  });
+
 $(window).ready(function () {
     $('body').css('opacity', '1');
  })
