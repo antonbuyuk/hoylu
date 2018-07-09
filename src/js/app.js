@@ -18,6 +18,23 @@ $(document).ready(function () {
             $(textSelect).html(text);
         }
     });
+
+    $('.news_list .news_block').each(function () {
+        var textSelect = $(this).find('.text p');
+        textBlock = $(textSelect).text();
+        text = textBlock;
+        moreText = '...';
+        link = $(this).attr('href');
+        more = '<a href=' + link + '>[...]</a>';
+
+        if (text.length > 200) {
+            text = text.substr(0, 200);
+            $(textSelect).html(text + moreText);
+        } else {
+            text = text.substr(0, 200);
+            $(textSelect).html(text);
+        }
+    });
 });
 
 // Carousel

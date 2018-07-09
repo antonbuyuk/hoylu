@@ -1,0 +1,42 @@
+extends templates/_layout
+
+block vars
+    - var page = "main_page";
+    - var title = "news";
+
+block content
+    section.section
+        .row.expanded
+            .small-12
+                .background-6.background_image.background_image-cover.flex.align-middle(style='background-image: url(./templates/_ares/img/svg/bg1.svg)')
+                    .row
+                        .columns.small-12
+                            include ./components/_breadcrumbs
+    section.section
+        .row.mb-4
+            .columns.small-12
+                .title.title_size-medium.weight-bold Press resources
+        .row
+            .columns.small-12.medium-4.large-3
+                a(href="#", title="title").link_tab
+                    img(src="./templates/_ares/img/svg/logo-link.svg", alt="") 
+                    span Images & Videos
+            .columns.small-12.medium-4.large-3
+                a(href="#", title="title").link_tab
+                    img(src="./templates/_ares/img/svg/picture.svg", alt="") 
+                    span Executive Team
+            .columns.small-12.medium-12.large-4.large-offset-2
+                .flex-row.align-left.align-middle
+                    .title.title_size-extraSmall.weight-bold.color-grey.width-auto Stay connected
+                    -var social = ["./templates/_ares/img/svg/social/blue/twitter.svg","./templates/_ares/img/svg/social/blue/facebook.svg","./templates/_ares/img/svg/social/blue/youtube.svg","./templates/_ares/img/svg/social/blue/linkedin.svg","./templates/_ares/img/svg/social/blue/vimeo.svg"]
+                    include ./components/_social
+    section.section.news_list
+        .row.mb-4
+            .columns.small-12
+                .title.title_size-medium.weight-bold The latest news
+        .row.mb-3
+            -var newsItem = [{"medium":"12","large":"12","img":"https://placeimg.com/270/180/any","date":"May 5th. 2018","title":"Hoylu ab publishes the interim report for january - march 2018","text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"},{"medium":"12","large":"12","img":"https://placeimg.com/270/180/any","date":"May 5th. 2018","title":"Hoylu ab publishes the interim report for january","text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"},{"medium":"12","large":"12","img":"https://placeimg.com/270/180/any","date":"May 5th. 2018","title":"Hoylu receives orders in education","text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"},{"medium":"12","large":"12","img":"https://placeimg.com/270/180/any","date":"May 5th. 2018","title":"Hoylu receives orders in education","text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"},{"medium":"12","large":"12","img":"https://placeimg.com/270/180/any","date":"May 5th. 2018","title":"Hoylu receives orders in education","text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"},{"medium":"12","large":"12","img":"https://placeimg.com/270/180/any","date":"May 5th. 2018","title":"Hoylu receives orders in education","text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"},{"medium":"12","large":"12","img":"https://placeimg.com/270/180/any","date":"May 5th. 2018","title":"Hoylu receives orders in education","text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"}];
+            include ./components/_news
+        .row
+            .columns.small-12
+                include ./components/_pagination

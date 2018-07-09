@@ -3,7 +3,7 @@
 *:after {
 	box-sizing: inherit;
 	outline: none;
-}
+} 
 
 html {
 	box-sizing: border-box;
@@ -188,7 +188,24 @@ p {
 			margin-right: auto;
 			margin-top: 1rem;
 		}
-    }
+	}
+	
+	&_tab{
+		border-bottom: none;
+		font-weight: 700;
+		font-size: 1.125rem;
+		display: inline-flex;
+		align-items: center;
+
+		img{
+			height: 2.5rem;
+			margin-right: 2rem;
+		}
+
+		@media (max-width: 63.975em){
+			margin-bottom: 1rem;
+		}
+	}
 }
 
 .copirate{

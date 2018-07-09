@@ -5,25 +5,37 @@
 
     li{
         margin-right: 0.625rem;
+        width: 1.875rem;
+        height: 1.875rem;
 
         &:last-child{
             margin-right: 0;
         }
 
         a{
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: none;
+            font-size: 0.875rem;
+            height: 100%;
+            color: @black;
+        }
 
-           &:hover{}
+        &:hover{
+            background-color: @link-color;
+
+            a{
+                color: @white;
+            }
         }
 
         &.current{
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            font-size: 1rem;
+            font-size: 0.875rem;
+            background-color: @link-color;
 
             span{
 
@@ -34,7 +46,7 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            font-size: 1rem;
+            font-size: 0.875rem;
         }
     }
 }
