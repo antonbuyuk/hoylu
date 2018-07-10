@@ -1,5 +1,5 @@
 $(document).foundation();
-
+$('select').styler();
 // Text
 $(document).ready(function () {
     $('.news_block').each(function () {

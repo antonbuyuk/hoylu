@@ -1,0 +1,42 @@
+extends templates/_layout
+
+block vars
+    - var page = "main_page";
+    - var title = "news latest";
+
+block content
+    section.section
+        .row.expanded
+            .small-12
+                .background-6.background_image.background_image-cover.flex.align-middle(style='background-image: url(./templates/_ares/img/svg/bg1.svg)')
+                    .row
+                        .columns.small-12
+                            include ./components/_breadcrumbs
+        .row.expanded
+            .small-12
+                .background-49.background_image.background_image-cover.flex.align-middle(style='background-image: url(./templates/_ares/img/jpg/main.png)')
+    section.section.news_list-last
+        .row
+            .columns.small-12.medium-7.large-8
+                .row.mb-4
+                    .columns.small-12
+                        .title.title_size-medium.weight-bold Latest Regulatory News
+                .row.mb-3
+                    -var newsItem = [{"medium":"12","large":"12","date":"May 5th. 2018","title":"Hoylu ab publishes the interim report for january - march 2018"},{"medium":"12","large":"12","date":"May 5th. 2018","title":"Hoylu ab publishes the interim report for january"},{"medium":"12","large":"12","date":"May 5th. 2018","title":"Hoylu receives orders in education"},{"medium":"12","large":"12","date":"May 5th. 2018","title":"Hoylu receives orders in education"},{"medium":"12","large":"12","date":"May 5th. 2018","title":"Hoylu receives orders in education"},{"medium":"12","large":"12","date":"May 5th. 2018","title":"Hoylu receives orders in education"},{"medium":"12","large":"12","date":"May 5th. 2018","title":"Hoylu receives orders in education"}];
+                    include ./components/_news
+                .row
+                    .columns.small-12
+                        include ./components/_pagination
+            .columns.hidden-small.medium-5.large-4
+                - var formBlock = [{"textarea":false,"btnForm":"subscribe","formItems":[{"medium":"12","large":"12","inpt":"E-mail"}]}];
+                .form_area.sidebar_form.mb-3
+                    .title.align-center.color-dark.title_size-small.weight-bold.text-center.mb-1 Subscribe to Regulatory News
+                    .text-medium.color-grey.text-center.mb-2
+                        p Yes! I would like to receive notifications about Hoylu.
+                    include ./components/_form
+                - var formBlock = [{"textarea":false,"btnForm":"subscribe","formItems":[{"medium":"12","large":"12","inpt":"E-mail"}]}];
+                .form_area.sidebar_form
+                    .title.align-center.color-dark.title_size-small.weight-bold.text-center.mb-1 Unsubscribe to Regulatory News
+                    .text-medium.color-grey.text-center.mb-2
+                        p I no longer want to receive email alerts for Hoylu AB.
+                    include ./components/_form

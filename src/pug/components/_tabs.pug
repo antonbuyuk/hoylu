@@ -1,0 +1,12 @@
+for tab in tabsBlock
+    .tabs_area
+        ul.tabs(id=tab.id ,data-tabs)
+            for item in tab.item
+                li.tabs-title
+                    a(href="#"+item.id)= item.title
+        .tabs-content(data-tabs-content=tab.id)
+            for item in tab.item
+                .tabs-panel(id=item.id)= item.content
+
+//- -var tabsBlock = [{"id":"calculator","item":[{"id":"tabs1","title":"By amount invested","content":"1"},{"id":"tabs2","title":"by shares bought","content":"2"}]}];
+//- include ./components/_tabs

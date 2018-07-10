@@ -1,0 +1,92 @@
+extends templates/_layout
+
+block vars
+    - var page = "main_page";
+    - var title = "investor corparate";
+
+block content
+    section.section.mb-0
+        .row.expanded
+            .small-12
+                .background-6.background_image.background_image-cover.flex.align-middle(style='background-image: url(./templates/_ares/img/svg/bg1.svg)')
+                    .row
+                        .columns.small-12
+                            include ./components/_breadcrumbs
+        .row.expanded
+            .small-12
+                .background-49.background_image.background_image-cover.flex.align-middle(style='background-image: url(./templates/_ares/img/jpg/main.png)')
+    section.section.section_color-blue.section_padding-2
+        .row
+            .column.small-12
+                nav.menu_links
+                    ul.menu_links_list
+                        li.menu_links_item.is-active
+                            a(href="#") governance documents
+                        li.menu_links_item
+                            a(href="#") share information
+    section.section
+        .row
+            .columns.small-12.medium-8.large-9
+                .row.mb-6
+                    .columns.small-12
+                        .title.title_size-medium.weight-bold.mb-5 Articles of Association
+                        mixin pdf(text)
+                            a.pdf(href='#')
+                                img(src="./templates/_ares/img/svg/pdf.svg", alt="")
+                                span.pdf_container
+                                    span.pdf_title=text
+                                    span.pdf_date Posted 5/16/2017
+                        +pdf("Power of Attorney")
+                        +pdf("Power of Attorney")
+                .row.mb-6
+                    .columns.small-12
+                        .title.title_size-medium.weight-bold.mb-5 Extraordinary General Meeting
+                        mixin pdf(text)
+                            a.pdf(href='#')
+                                img(src="./templates/_ares/img/svg/pdf.svg", alt="")
+                                span.pdf_container
+                                    span.pdf_title=text
+                                    span.pdf_date Posted 5/16/2017
+                        +pdf("Authorization for the Board to Resolve on Share Issues")
+                        +pdf("Authorization for the Board to Resolve on Share Issues")
+                        +pdf("Authorization for the Board to Resolve on Share Issues")
+                        +pdf("Authorization for the Board to Resolve on Share Issues")
+                        +pdf("Authorization for the Board to Resolve on Share Issues")
+                .row
+                    .columns.small-12
+                        .title.title_size-medium.weight-bold.mb-5 Annual General Meeting
+                        mixin pdf(text)
+                            a.pdf(href='#')
+                                img(src="./templates/_ares/img/svg/pdf.svg", alt="")
+                                span.pdf_container
+                                    span.pdf_title=text
+                                    span.pdf_date Posted 5/16/2017
+                        +pdf("The Boards proposed resolution regarding implementation of 2018 Employee Stock Option Program")
+                        +pdf("The Boards proposed resolution regarding implementation of 2018 Employee Stock Option Program")
+                        +pdf("The Boards proposed resolution regarding implementation of 2018 Employee Stock Option Program")
+                        +pdf("The Boards proposed resolution regarding implementation of 2018 Employee Stock Option Program")
+                        +pdf("The Boards proposed resolution regarding implementation of 2018 Employee Stock Option Program")
+                        +pdf("The Boards proposed resolution regarding implementation of 2018 Employee Stock Option Program")
+                        +pdf("The Boards proposed resolution regarding implementation of 2018 Employee Stock Option Program")
+            .columns.hidden-small.medium-4.large-3
+                .sidebar.border-blue.mb-2
+                    .flex.align-middle.mb-1
+                        img(src="./templates/_ares/img/svg/logo_small.svg", alt="", style='width: 2.25rem;height: 2.25rem; margin-right: 1.25rem;')
+                        .title.weight-medium.text-small.text-uppercase Board of Directors Executive Officers
+                    .title.weight-medium.text-small.text-uppercase Contact
+                    .text.text-small
+                        p Stein Revelsby, CEO sr@hoylu.com
+                .sidebar.border-blue
+                    .title.weight-medium.text-small.text-uppercase.mb-2 Auditors and Certified Advisors
+                    .text.text-small
+                        p Auditor
+                            br
+                            | Per-Arne Petterson, Deloitte AB
+                        p Certified Advisor
+                            br
+                            | Mangold Fondkommission AB 
+                            | +46 8-503 01 5500,
+                            br
+                            a(href="") Info@Mangold.se
+                            br
+                            | Engelbrektsplan 2, 114 34 Stockholm, Sweden

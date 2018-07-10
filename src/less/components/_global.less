@@ -108,12 +108,13 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight: 700;
 	margin: 0;
 	color: @text-color;
-	margin-bottom: 1em;
-	font-family: @font-family--serif;
+	margin-bottom: 1rem;
+	font-family: @font-family;
 }
 h1,
 .h1 {
 	font-size: @font-size--h1;
+	margin-bottom: 2rem;
 }
 h2,
 .h2 {
@@ -230,7 +231,6 @@ p {
 	font-size: 0.875rem;
 }
 
-
 .flex{
 	display: flex;
 
@@ -289,8 +289,6 @@ p {
 	position: absolute;
 }
 
-.wrapper{}
-
 .section{
 	position: relative;
 	width: 100%;
@@ -298,6 +296,10 @@ p {
 
 	&_padding{
 		padding: 8.75rem 0;
+
+		&-2{
+			padding: 2.125rem 0;
+		}
 
 		&-4{
 			padding: 3.75rem 0;
@@ -323,6 +325,13 @@ p {
 		}
 	}
 
+	&_text{
+
+		.title{
+			width: auto;
+		}
+	}
+
 	@media (min-width: 40em) and (max-width: 63.975em){
 		margin-bottom: 5rem;
 	}
@@ -345,5 +354,53 @@ p {
 
 	#map{
 		height: 100%;
+	}
+}
+
+.pdf{
+	display: flex;
+	align-items: center;
+	border-bottom: none;
+	margin-bottom: 1.25rem;
+
+	img{
+		height: 3.5rem;
+		margin-right: 1.875rem;
+	}
+
+	&_container{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&_title{
+		color: #000;
+		font-size: 1.125rem;
+		line-break: 1.75rem;
+	}
+
+	&_date{
+		color: #666;
+		font-size: 1.125rem;
+		line-break: 1.75rem;
+	}
+}
+
+.border{
+
+	&-blue{
+		border: 1px solid @link-color;
+	}
+}
+
+.sidebar{
+	padding: 1.75rem 1.25rem;
+
+	&_form{
+
+		&.form_area{
+			padding: 3.25rem 2rem;
+		}
 	}
 }
