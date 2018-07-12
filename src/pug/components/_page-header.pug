@@ -17,5 +17,12 @@ header.header.header-white
                 span.stick.stick-1
                 span.stick.stick-2
                 span.stick.stick-3
+    .header_mobile
+        .row
+            .columns.small-12
+                -var mainMenu = [{"class":"header","menuItems":[{"link":"why hoylu?","dropdown":["Investor Relations","News","Stock Information","Financial Information","Corporate Governance"]},{"link":"hoylu suite"},{"link":"innovation @ work"},{"link":"free trial"},{"link":"news"}]}];
+                include ./_menu
+            .columns.small-12
+                -var mainMenu = [{"class":"header-auth","menuItems":[{"link":"sign in"},{"link":"sign up"}]}];
+                include ./_menu
 
-            

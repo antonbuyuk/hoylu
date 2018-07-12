@@ -1,0 +1,98 @@
+extends templates/_layout
+
+block vars
+    - var page = "main_page";
+    - var title = "investor report";
+
+block content
+    section.section
+        .row.expanded
+            .small-12
+                .background-6.background_image.background_image-cover.flex.align-middle(style='background-image: url(./templates/_ares/img/svg/bg1.svg)')
+                    .row
+                        .columns.small-12
+                            include ./components/_breadcrumbs
+        .row.expanded
+            .small-12
+                .background-49.background_image.background_image-cover.flex.align-middle(style='background-image: url(./templates/_ares/img/jpg/main.png)')
+    section.section
+        .row.mb-3
+            .columns.small-12.medium-10.large-7
+                .title.title_size-medium.weight-bold.mb-1 Financial Reports
+        .row
+            .columns.small-12
+                .table_scroll.table_report
+                    table
+                        thead
+                            tr
+                                th
+                                th
+                                th(colspan='4') 2017
+                                th(colspan='4') 2018
+                        tbody
+                            tr
+                                td(rowspan='2', style='text-align: left;') Interim Reports
+                                td EN
+                                td Q1
+                                td Q2
+                                td Q3
+                                td Q4
+                                td Q1
+                                td Q2
+                                td Q3
+                                td Q4
+                            tr
+                                td SW
+                                td Q1
+                                td Q2
+                                td Q3
+                                td Q4
+                                td Q1
+                                td Q2
+                                td Q3
+                                td Q4
+                        tbody
+                            tr
+                                td(rowspan='2', style='text-align: left;') Annual Report
+                                td EN
+                                td 
+                                    a(href="", download).pdf
+                                        img(src="./templates/_ares/img/svg/pdf.svg", alt="")
+                            tr
+                                td SW
+                                td 
+                                    a(href="", download).pdf
+                                        img(src="./templates/_ares/img/svg/pdf.svg", alt="")
+    section.section
+        .row.mb-3
+            .columns.small-12.medium-10.large-7
+                .title.title_size-medium.weight-bold.mb-1 Financial Calendar
+        .row
+            .columns.small-12
+                .table_scroll.table-noborder
+                    table
+                        thead
+                            tr
+                                th Date
+                                th Details
+                        tbody
+                            tr
+                                td 02/16/2018
+                                td 
+                                    a(href="#",download) Interim Report Q4 2017
+                            tr
+                                td 02/16/2018
+                                td 
+                                    a(href="#",download) Interim Report Q4 2017
+                            tr
+                                td 02/16/2018
+                                td 
+                                    a(href="#",download) Interim Report Q4 2017
+                            tr
+                                td 02/16/2018
+                                td 
+                                    a(href="#",download) Interim Report Q4 2017
+                            tr
+                                td 02/16/2018
+                                td 
+                                    a(href="#",download) Interim Report Q4 2017

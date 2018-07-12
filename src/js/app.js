@@ -69,8 +69,17 @@ $(document).ready(function () {
       $(".stick").toggleClass(function () {
         return $(this).is('.open, .close') ? 'open close' : 'open';
       });
+      $('.header_mobile').toggleClass('is-active');
     });
   });
+
+  // Input
+  $(document).ready(function(){
+      $('.form_item-radiobox input').click(function(){
+          $(".form_item-radiobox").removeClass('is-checked');
+          $(this).parents(".form_item-radiobox").addClass('is-checked');
+      })
+  })
 
 $(window).ready(function () {
     $('body').css('opacity', '1');

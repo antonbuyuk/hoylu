@@ -1,0 +1,140 @@
+table{
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    border-collapse: collapse;
+
+    thead{}
+
+    tbody{}
+
+    tfoot{
+        text-align: left;
+
+        tr{
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+
+        th{
+            font-weight: 500;
+        }
+    }
+
+    tr{
+        border-bottom: 1px solid @green;
+    }
+
+    th,
+    td{
+        color: #666;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        padding: 0.325rem 0;
+        text-align: left;
+        padding-right: 1rem;
+        white-space: nowrap;
+    }
+    
+}
+
+.table{
+
+    &_scroll{
+        overflow-x: auto;
+    }
+
+    &_report{
+
+        table{
+
+            tr{
+                border-bottom: none;
+            
+                td,th{
+                    text-align: center;
+                    padding: 1rem;
+                }
+            }
+
+            tbody{
+                border-bottom: 1px solid @green;
+
+                &:last-child{
+                    border: none;
+                }
+            }
+
+            .pdf{
+                margin-bottom: 0;
+                justify-content: center;
+
+                img{
+                    margin-right: 0;
+                    width: 1.75rem;
+                    height: 2.25rem;
+                }
+            }
+        }
+    }
+
+    &-border{
+
+        tr{
+            border: 1px solid #666;
+
+            td,th{
+                padding: 0.5rem 1.25rem;
+
+                &.up{
+                    position: relative;
+                    color: @green;
+                    display: flex;
+                    align-items: center;
+
+                    &:after{
+                        content: '';
+                        position: relative;
+                        display: inline-flex;
+                        align-items: center;
+                        width: 0;
+                        height: 0;
+                        border-left: 0.5rem solid transparent;
+                        border-right: 0.5rem solid transparent;
+                        border-bottom: 0.75rem solid @green;
+                        margin-left: 0.5rem;
+                    }
+                }
+
+                &.down{
+                    position: relative;
+                    color: @red;
+                    
+                    &:after{
+                        content: '';
+                        position: relative;
+                        display: inline-flex;
+                        align-items: center;
+                        width: 0;
+                        height: 0;
+                        border-left: 0.5rem solid transparent;
+                        border-right: 0.5rem solid transparent;
+                        border-top: 0.75rem solid @red;
+                        margin-left: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &-noborder{
+        
+        table{
+
+            tr{
+                border-bottom: none;
+            }
+        }
+    }
+}

@@ -59,6 +59,11 @@
                     a{
                         padding-right: 2rem;
                         border-right: 1px solid #e0e0e0;
+
+                        @media(max-width: 63.975em){
+                            padding: 1rem 0;
+                            border-right: 0;
+                        }
                     }
                 }
             }
@@ -77,5 +82,25 @@
 
     &_search{}
 
-    &_mobile{}
+    &_mobile{
+        position: absolute;
+        z-index: 999;
+        background-color: #fff;
+        top: 100%;
+        left: 100vw;
+        width: 100vw;
+        transition: @transition-time;
+
+        &.is-active{
+            transform: translateX(-100%);
+        }
+
+        .menu_list{
+            flex-direction: column;
+            
+            .menu_item{
+                padding: 0;
+            }
+        }
+    }
 }
